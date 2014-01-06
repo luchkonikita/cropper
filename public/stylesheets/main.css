@@ -1,0 +1,58 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-brand{
+  padding-left: 40px;
+  background: url('../images/scissors.png') no-repeat 13px 15px;
+  background-size: 15%;
+}
+
+#content{
+  margin-top: 40px;
+}
+
+.upload-form{
+  width: 348px;
+  padding: 20px;
+}
+
+.upload-form h2{
+  text-align: center;
+}
+
+#image-field-wrapper{
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+#image-field-mask{
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 40px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
+}
+
+#image-field-mask span{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 6px;
+  display: block;
+  width: 100%;
+}
+
+#image-field{
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 40px;
+  opacity: 0;
+}
