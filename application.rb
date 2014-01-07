@@ -11,6 +11,7 @@ configure do
                    :url_base => 'http://localhost:4567/'
                  )
   ALLOWEDFILETYPES = [ '.jpg','.jpeg', '.png', '.gif' ]
+  enable :sessions
 end
 
 get '/' do
@@ -19,18 +20,6 @@ end
 
 post '/upload' do
   if params['image']
-
-    # File.open('uploads/' + params['image'][:filename], 'w') do |f|
-    #   f.write(params['image'][:tempfile].read)
-    # end
-
-    # f = ImageList.new("uploads/#{params['image'][:filename]}")
-    # thumb = f.resize_to_fit(300)
-    # thumb.write("public/images/#{params['image'][:filename]}")
-
-    # @image_url  = "images/#{params['image'][:filename]}"
-    # @image_name = params['image'][:filename]
-
     extension = File.extname(params['image'][:filename])
     if ALLOWEDFILETYPES.include?(extension)
 

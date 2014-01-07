@@ -8,8 +8,10 @@ $(document).ready(function() {
           var img = new Image();
           img.src = ret.filepath;
           img.width = 308;
-          $(img).appendTo($('#image-wrapper'));
+          $('#image-wrapper').html($(img));
           $(img).Jcrop();
+        } else if (ret.notice){
+          $('#image-wrapper').html($('<div class="alert alert-danger"></div>').text(ret.notice));
         }
       }
     });
